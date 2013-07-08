@@ -1,4 +1,10 @@
 BizusaBlackbird::Application.routes.draw do
+  root "home#index"
+
+  get "/auth/:provider/callback" => "session#oauth_callback"
+  match "/logout" => "application#log_out_user", :via => [:get, :post]
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
