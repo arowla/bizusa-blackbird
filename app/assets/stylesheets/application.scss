@@ -14,3 +14,9 @@
  *= require bootstrap-responsive
  */
 
+@font-face
+    font-family: "Bitter-Regular"
+    src: asset-url('/lib/assets/fonts/Bitter-Regular.otf')
+    src: asset-url('/lib/assets/fonts/Bitter-Regular.otf?#iefix') format('opentype')
+    font-weight: normal
+    font-style: normal

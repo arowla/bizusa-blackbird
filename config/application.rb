@@ -25,6 +25,8 @@ module BizusaBlackbird
         ENV[key.to_s] = value
       end if File.exists?(env_file)
     end
+
+    config.assets.paths << "#{Rails.root}/lib/assets/fonts"
     
   end
 end
