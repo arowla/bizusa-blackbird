@@ -1,14 +1,194 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>BizusaBlackbird</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body { padding-top: 60px; /* 60px to make the container go all the way
+      to the bottom of the topbar */ }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <style>
+    </style>
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="row-fluid" id="header">
+    	<div class="span2">
+    	</div>
+    	<div class="span2" style="display: block;">
+    		<img src="https://s3.amazonaws.com/media.jetstrap.com/KliwEZduTFCAOUK6fcJ9_logo.png" id="logo">
+    		<p id="tagline">
+    			Discover. Connect. Grow.
+    		</p>
+    	</div>
+    	<div class="span1" style="display: block;">
+    	</div>
+    	<div class="span5" style="display: block;" id="biznav">
+    		<div class="row-fluid">
+    			<div class="span10">
+    			</div>
+    			<div class="span2">
+    				<img src="https://s3.amazonaws.com/media.jetstrap.com/XPApS9BjQV2jVju7mAun_1373271153_twitter_circle_gray.svg" width="36">
+    				<img src="https://s3.amazonaws.com/media.jetstrap.com/yGuVMFPFRLqp3m5vftSA_1373271151_linkedin_circle_gray.svg" width="36">
+    			</div>
+    		</div>
+    		<ul class="nav nav-tabs biznav">
+    			<li>
+    				<a class="biznav" href="#">Tour</a>
+    			</li>
+    			<li>
+    				<a class="biznav" href="#">Resources</a>
+    			</li>
+    			<li>
+    				<a class="biznav" href="#">Events</a>
+    			</li>
+    			<li>
+    				<a class="biznav" href="#">About Us</a>
+    			</li>
+    			<li>
+    				<a class="biznav" href="#">Contact Us</a>
+    			</li>
+    			<li class="active">
+    				<a class="biznav" href="#">MyBizUSA</a>
+    			</li>
+    		</ul>
+    	</div>
+    	<div class="span2">
+    		<h3>
+    			<br>
+    		</h3>
+    		<p>
+    			<br>
+    		</p>
+    	</div>
+    </div>
+    
+    <!-- /container --><div class="row-fluid">
+      <div class="span2"></div>
+      <div class="span8" style="display: block;">
+        <%= yield %>
+      </div>
+      <div class="span2" style="display: block;"></div>
+    </div>
 
-<%= yield %>
+    <style>
+      body {
+        padding-top: 0px;
+      }
+      
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+      
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+      
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+      
+      /* akr */
+      #header {
+        background: #EBEBEB;
+        height: 142px;
+      }
+      
+      #tagline {
+          font-family: Bitter-Regular, Times, serif;
+          font-size: 12px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: normal;
+          height: 14px;
+          letter-spacing: normal;
+          text-align: right;
+      }
+      
+      #header {
+          padding-top: 1em;
+          margin-top: 0;
+      }
+      
+      #logo {
+          width: 244px;
+          margin-top: 3em;
+      }
+      
+      .biznav {
+          color: rgb(21,86,123);
+          font-family: Bitter-Regular, Times, serif;
+          font-size: 18px;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: normal;
+          height: 21px;
+          line-height: normal;
+          text-align: center;
+          border: none;
+          text-decoration: none;
+          background: none;
+      }
+      .biznav > a {
+          padding: 0.9em 1.2em;
+      }
+      .biznav > :hover, :focus {
+          background: none;
+          border: none;
+      }
+      ul.biznav > li > a:hover, ul.biznav > li > a:active, ul.biznav > li > a:focus, .navtabs > li.active > a:hover, .navtabs > li.active > a:focus {background-color: rgb(21, 86, 123); color: #EBEBEB;}
+      
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
+    </script>
+    <script src="assets/js/bootstrap.js">
+    </script>
+    <script>
 
-</body>
+    </script>
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>
+
