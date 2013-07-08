@@ -18,6 +18,9 @@ gem 'omniauth-mygov', :git => 'https://github.com/GSA-OCSIT/omniauth-mygov.git'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'haml'
+gem 'haml-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'turbolinks'
@@ -28,14 +31,28 @@ group :doc do
   gem 'sdoc', :require => false
 end
 
+gem 'omniauth-mygov', :git => 'https://github.com/GSA-OCSIT/omniauth-mygov.git'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+group :development do
+  gem 'thin'
+  gem 'haml-rails'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'letter_opener'
+  gem 'railroady'
+  gem 'pry'
+  gem 'pry-nav'
+  gem 'debugger'
+  gem 'brakeman', :require => false
+  gem 'capistrano'
+  gem 'debugger'
+end
 
-# Use debugger
-gem 'debugger', :group => [:development, :test]
+group :production do
+	gem 'pg'
+end
