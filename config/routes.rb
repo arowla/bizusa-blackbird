@@ -1,6 +1,6 @@
 BizusaBlackbird::Application.routes.draw do
   root "home#index"
-  get "profile/index", :as => :profile_path
+  get "profile" => 'profile#index'
 
   get "/auth/:provider/callback" => "session#oauth_callback"
   match "/logout" => "application#log_out_user", :via => [:get, :post]
