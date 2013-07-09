@@ -1,8 +1,5 @@
 <h1>My Business USA Profile</h1>
-<form>
-  <fieldset>
-    <legend>Business Name</legend>
-    <label for="legal_entity_name">Legal Entity Name</label>
-    <input type="text" id="legal_entity_name" size="30"/>
-  </fieldset>
-</form>
+<%= form_for @profile do |f| %>
+  <%= f.text_field :entity_legal_name %>
+  <%= f.text_field :entity_trade_name %>
+<% end %>

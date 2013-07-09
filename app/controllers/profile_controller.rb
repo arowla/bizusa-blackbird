@@ -1,5 +1,5 @@
 class ProfileController < ApplicationController
   def index
-    @title = 'Blackbird'
+    @profile = Profile.new(current_user)
   end
 end

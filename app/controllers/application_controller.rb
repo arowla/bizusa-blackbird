@@ -16,4 +16,8 @@ class ApplicationController < ActionController::Base
 	def current_user 
 		session[:user]
 	end
+
+    def current_user=(user_hash)
+      session[:user] = user_hash
+    end
 end
