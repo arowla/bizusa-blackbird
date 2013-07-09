@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ProfileController do
+describe ProfilesController do
 
   describe "GET 'index'" do
     context "when a user is logged in" do

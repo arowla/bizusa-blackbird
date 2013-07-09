@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe "profile/index" do
+describe "profiles/index" do
   context "user has not yet filled out their profile" do
     it "displays all the profile fields" do
       @profile = Profile.new
       render
 
-      rendered.should contain("Legal Corporate Entity Name")
-      rendered.should contain("Trade Name/DBA")
+      rendered.should contain("Entity legal name")
+      rendered.should contain("Entity trade name")
       rendered.should contain("Executor/Administrator/Trustee/\"Care Of\" Name")
       rendered.should contain("Mailing Address (Street or P.O. Box)")
       rendered.should contain("Mailing City")
