@@ -1,4 +1,4 @@
-.row
+.row-fluid
   .span12
 
     %h2
@@ -14,6 +14,3 @@
           Currently logged in as: 
           %b= session['user']['email']
         = button_to 'Logout', "logout", :class => 'large button positive'
-
-
-= debug session if Rails.env.development?
