@@ -4,7 +4,7 @@ class SessionController < ApplicationController
     # session[:user] = auth.extra.raw_info.to_hash
     # session[:token] = auth.credentials.token
     log_in_user(auth.extra.raw_info.to_hash, auth.credentials.token)
-    redirect_to session[:return_to] || :profile_path
+    redirect_to session[:return_to] || root_url
   end
 
   def logout
