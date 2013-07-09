@@ -4,7 +4,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   		:site => ENV['MYGOV_HOME'],
   		:token_url => "/oauth/authorize",
   		:ssl => {
-  			:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'
+  			:ca_path => "/etc/ssl/certs"
   		}
   	},
   :scope => ["profile", "tasks", "submit_forms", "notifications"]
