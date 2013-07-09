@@ -4,7 +4,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   		:site => ENV['MYGOV_HOME'],
   		:token_url => "/oauth/authorize",
   		:ssl => {
-  			:verify => false
+  			:verify => true
   		}
   	},
   :scope => ["profile", "tasks", "submit_forms", "notifications"]
