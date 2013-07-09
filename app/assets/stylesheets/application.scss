@@ -14,3 +14,29 @@
  *= require bootstrap-responsive
  */
 
+// @font-face
+//     font-family: "Bitter-Regular"
+//     src: asset-font-url('/lib/assets/fonts/Bitter-Regular.otf')
+//     src: asset-font-url('/lib/assets/fonts/Bitter-Regular.otf?#iefix') format('opentype')
+//     font-weight: normal
+//     font-style: normal
+
+@font-face
+  font-family: 'bitterregular'
+  src: font-url('bitterer-regular-webfont.eot')
+  src: font-url('bitterer-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('bitterer-regular-webfont.woff') format('woff'),
+       font-url('bitterer-regular-webfont.ttf') format('truetype'),
+       font-url('bitterer-regular-webfont.svg#bitterregular') format('svg')
+  font-weight: normal
+  font-style: normal
+
+// @font-face
+//   font-family: 'bitterbold'
+//   src: font-url('bitterer-webfont.eot')
+//   src: font-url('bitterer-webfont.eot?#iefix') format('embedded-opentype'),
+//        font-url('bitterer-webfont.woff') format('woff'),
+//        font-url('bitterer-webfont.ttf') format('truetype'),
+//        font-url('bitterer-webfont.svg#bitterbold') format('svg')
+//   font-weight: normal
+//   font-style: normal
