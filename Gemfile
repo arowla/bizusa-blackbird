@@ -36,7 +36,6 @@ group :doc do
   gem 'sdoc', :require => false
 end
 
-gem 'omniauth-mygov', :git => 'https://github.com/GSA-OCSIT/omniauth-mygov.git'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
