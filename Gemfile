@@ -12,6 +12,7 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'webrat'
   gem 'capybara'
+  gem 'pry'
 end
 
 gem 'sass-rails'
