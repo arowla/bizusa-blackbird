@@ -1,0 +1,8 @@
+<h1>My BusinessUSA Profile</h1>
+<%= form_for @profile do |f| %>
+  <%= f.label :entity_legal_name %>
+  <%= f.text_field :entity_legal_name %><br />
+  
+  <%= f.label :entity_trade_name %>
+  <%= f.text_field :entity_trade_name %><br />
+<% end %>

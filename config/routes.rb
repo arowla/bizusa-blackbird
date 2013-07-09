@@ -1,6 +1,6 @@
 BizusaBlackbird::Application.routes.draw do
   root "home#index"
-  get "profile/index", :as => :profile_path
+  #get "profile" => 'profile#index', :as => :profile
 
   get "/auth/:provider/callback" => "session#oauth_callback"
   match "/logout" => "application#log_out_user", :via => [:get, :post]
@@ -18,7 +18,7 @@ BizusaBlackbird::Application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  resources :profiles
 
   # Example resource route with options:
   #   resources :products do

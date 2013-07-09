@@ -1,8 +1,9 @@
 require 'spec_helper'
 
-describe "profile/index.html.erb" do
+describe "profile/index" do
   context "user has not yet filled out their profile" do
     it "displays all the profile fields" do
+      @profile = Profile.new
       render
 
       rendered.should contain("Legal Corporate Entity Name")
@@ -18,7 +19,6 @@ describe "profile/index.html.erb" do
       rendered.should contain("Physical Zip")
     end
   end
-  pending "add some examples to (or delete) #{__FILE__}"
 
 
   # legal name of entity
